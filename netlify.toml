@@ -1,9 +1,14 @@
 [build]
-  command = "echo 'Building Streamlit app...' && pip install -r requirements.txt"
+  command = "pip install -r requirements.txt && python setup.py"
   publish = "."
 
 [build.environment]
-  PYTHON_VERSION = "3.11" base = "."
+  PYTHON_VERSION = "3.11"
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200 base = "."
   command = "python -m pip install --upgrade pip && pip install -r requirements.txt && python setup.py"
   publish = "."
 
