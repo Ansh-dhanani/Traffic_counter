@@ -286,7 +286,12 @@ with tab2:
 
         if run_webcam:
             # Check if we're in a cloud environment
-            if os.environ.get('NETLIFY') or os.environ.get('HEROKU') or os.environ.get('STREAMLIT_SHARING'):
+            is_cloud = (os.environ.get('NETLIFY') or os.environ.get('HEROKU') or 
+                       os.environ.get('STREAMLIT_SHARING') or os.environ.get('STREAMLIT_CLOUD') or
+                       os.environ.get('HOSTNAME', '').startswith('streamlit') or
+                       'streamlit.app' in os.environ.get('SERVER_NAME', ''))
+            
+            if is_cloud:
                 st.warning("⚠️ Webcam access is not available in cloud deployments. Please use video upload instead.")
                 st.info("This limitation exists because cloud servers don't have access to your local camera.")
                 run_webcam = False
