@@ -1,14 +1,19 @@
-# Streamlit Cloud Configuration
+# YOLO Traffic Counter - Streamlit Cloud Ready
 
-# This file is used by Streamlit Cloud for deployment
-# The app will be automatically deployed from the main branch
+This app is optimized for Streamlit Cloud deployment.
 
-# Required files:
-# - requirements.txt (✅ present)
-# - traffic_counter.py (✅ present - main app file)
+## Quick Deploy
 
-# Streamlit Cloud will automatically:
-# 1. Install dependencies from requirements.txt
-# 2. Run the app using: streamlit run traffic_counter.py
+1. Go to [share.streamlit.io](https://share.streamlit.io)
+2. Connect your GitHub account
+3. Select repository: `Ansh-dhanani/Traffic_counter`
+4. Main file: `traffic_counter.py`
+5. Deploy!
 
-# No additional configuration needed for Streamlit Cloud
+## Features
+
+- ✅ Video upload and processing
+- ✅ Real-time YOLO detection
+- ✅ Analytics dashboard
+- ✅ Data export (CSV/JSON)
+- ❌ Webcam (disabled in cloud)
